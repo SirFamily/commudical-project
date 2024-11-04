@@ -24,6 +24,11 @@ import BlueB from './assets/ความต้องการ/ปรับท่
 import BlueC from './assets/ความต้องการ/พบแพทย์.png'
 import BlueD from './assets/ความต้องการ/พบญาติ.png'
 
+import YellowA from './assets/ความรู้สึก/ร้อน.png'
+import YellowB from './assets/ความรู้สึก/หนาว.png'
+import YellowC from './assets/ความรู้สึก/เหนื่อย.png'
+import YellowD from './assets/ความรู้สึก/นอนไม่หลับ.png'
+
 const PatientCommunicationApp = () => {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [messageHistory, setMessageHistory] = useState([]);
@@ -63,10 +68,10 @@ const PatientCommunicationApp = () => {
       color: 'bg-yellow-500',
       hoverColor: 'hover:bg-yellow-600',
       phrases: [
-        { text: 'รู้สึกร้อน', image: '/api/placeholder/48/48', description: 'รู้สึกร้อน ต้องการปรับอุณหภูมิ' },
-        { text: 'รู้สึกหนาว', image: '/api/placeholder/48/48', description: 'รู้สึกหนาว ต้องการผ้าห่ม' },
-        { text: 'เหนื่อย', image: '/api/placeholder/48/48', description: 'รู้สึกเหนื่อย ต้องการพัก' },
-        { text: 'นอนไม่หลับ', image: '/api/placeholder/48/48', description: 'มีปัญหาการนอน' },
+        { text: 'รู้สึกร้อน', image: YellowA, description: 'รู้สึกร้อน ต้องการปรับอุณหภูมิ' },
+        { text: 'รู้สึกหนาว', image: YellowB, description: 'รู้สึกหนาว ต้องการผ้าห่ม' },
+        { text: 'เหนื่อย', image: YellowC, description: 'รู้สึกเหนื่อย ต้องการพัก' },
+        { text: 'นอนไม่หลับ', image: YellowD, description: 'มีปัญหาการนอน' },
       ]
     },
   ];
