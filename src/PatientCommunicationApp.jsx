@@ -133,10 +133,11 @@ const speak = (audioFile) => {
 
   // Optional: ถ้าต้องการแสดงไอคอนเมื่อเล่นเสียง
   setIsSpeaking(true);
-  setTimeout(() => setIsSpeaking(false), 2000); // ตั้งเวลาเพื่อให้ไอคอนหายไปหลัง 2 วินาที
+  setTimeout(() => setIsSpeaking(false), 3000); // ตั้งเวลาเพื่อให้ไอคอนหายไปหลัง 2 วินาที
 
   audio.onerror = () => {
     console.error("Error playing audio");
+    setIsSpeaking(false);
   };
 };
 
