@@ -41,7 +41,7 @@ const PainAssessment = ({ onPainSelect }) => {
         <img
           src={PainBodyImage}
           alt="Pain assessment body"
-          className="w-full h-auto object-contain"
+          className="w-full h-auto object-contain shadow-lg rounded-xl"
         />
 
         {painSpots.map((spot) => (
@@ -54,7 +54,7 @@ const PainAssessment = ({ onPainSelect }) => {
             style={{
               top: spot.cy,
               left: spot.cx,
-              width: "20px",
+              width: "29px",
               height: "20px",
               transform: "translate(-50%, -50%)",
               border: "2px solid #666",
@@ -74,9 +74,9 @@ const PainAssessment = ({ onPainSelect }) => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="w-full w-84 bg-white rounded-xl shadow-lg p-6"
+            className="w-full bg-white rounded-xl shadow-lg p-6"
           >
-            <h3 className="text-xl font-bold ">ระดับความปวด {selectlabel}</h3>
+            <h3 className="text-xl font-bold mb-4">ระดับความปวด {selectlabel}</h3>
             <img src={Tool} alt="" className="w-full h-auto object-contain"/>
           </motion.div>
         </AnimatePresence>
