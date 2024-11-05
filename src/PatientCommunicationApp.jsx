@@ -159,6 +159,9 @@ const speak = (audioFile) => {
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
+      <head>
+        <meta name="description" content="ระบบการสื่อสารสำหรับผู้ป่วยเพื่อสื่อสารความต้องการและความรู้สึก" />
+      </head>
       <div className="grid grid-row-3 gap-4 mb-8">
         {categories.map((category) => (
           <motion.button
