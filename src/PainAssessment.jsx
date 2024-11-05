@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PainBodyImage from "./assets/images/กินข้าว/1.jpg";
+import Tool from "./assets/images/กินข้าว/2.jpg"
+
 
 const PainAssessment = ({ onPainSelect }) => {
   const [selectedSpot, setSelectedSpot] = useState(null);
@@ -72,35 +74,10 @@ const PainAssessment = ({ onPainSelect }) => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="w-full max-w-md bg-white rounded-xl shadow-lg p-6"
+            className="w-full w-84 bg-white rounded-xl shadow-lg p-6"
           >
-            <h3 className="text-xl font-bold mb-4">ระดับความปวด {selectlabel}</h3>
-            <div className="grid grid-cols-3 gap-4">
-              {painLevels.map((pain) => (
-                <motion.button
-                  key={pain.level}
-                  onClick={() => {
-                    setPainLevel(pain.level);
-                    onPainSelect(selectlabel, pain.text);
-                  }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`p-4 rounded-lg border-2 transition-all ${
-                    painLevel === pain.level
-                      ? "border-blue-500 shadow-lg"
-                      : "border-gray-200"
-                  }`}
-                  style={{ backgroundColor: pain.color }}
-                >
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-white">
-                      {pain.level}
-                    </div>
-                    <div className="text-sm text-white">{pain.text}</div>
-                  </div>
-                </motion.button>
-              ))}
-            </div>
+            <h3 className="text-xl font-bold ">ระดับความปวด {selectlabel}</h3>
+            <img src={Tool} alt="" className="w-full h-auto object-contain"/>
           </motion.div>
         </AnimatePresence>
       )}
