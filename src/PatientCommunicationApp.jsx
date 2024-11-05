@@ -127,19 +127,19 @@ const PatientCommunicationApp = () => {
     console.log("Selected spot:", spot);
   };
 
-  const speak = (audioFile) => {
-    const audio = new Audio(audioFile);
-    audio.play();
-  
-    // Optional: ถ้าต้องการแสดงไอคอนเมื่อเล่นเสียง
-    setIsSpeaking(true);
-    setTimeout(() => setIsSpeaking(false), 2000); // ตั้งเวลาเพื่อให้ไอคอนหายไปหลัง 2 วินาที
-  
-    audio.onerror = () => {
-      console.error("Error playing audio");
-    };
+const speak = (audioFile) => {
+  const audio = new Audio(audioFile);
+  audio.play();
+
+  // Optional: ถ้าต้องการแสดงไอคอนเมื่อเล่นเสียง
+  setIsSpeaking(true);
+  setTimeout(() => setIsSpeaking(false), 2000); // ตั้งเวลาเพื่อให้ไอคอนหายไปหลัง 2 วินาที
+
+  audio.onerror = () => {
+    console.error("Error playing audio");
   };
-  
+};
+
   
 
   return (
