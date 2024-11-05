@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PainAssessment from "./PainAssessment";
 
@@ -72,9 +72,7 @@ import AudioL from "./assets/audio/อยากกลับบ้าน.mp3";
 const PatientCommunicationApp = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const audioRef = useRef(null);
-  const timeoutRef = useRef(null);
-  
+
   const categories = [
     {
       id: "pain",
@@ -130,30 +128,19 @@ const PatientCommunicationApp = () => {
   };
 
   const speak = (audioFile) => {
-    if (isSpeaking) return; // Prevent multiple plays at the same time
-
-    setIsSpeaking(true);
     const audio = new Audio(audioFile);
-    audioRef.current = audio;
     audio.play();
-
-    audio.onended = () => {
-      setIsSpeaking(false);
-      clearTimeout(timeoutRef.current);
-    };
+  
+    // Optional: ถ้าต้องการแสดงไอคอนเมื่อเล่นเสียง
+    setIsSpeaking(true);
+    setTimeout(() => setIsSpeaking(false), 2000); // ตั้งเวลาเพื่อให้ไอคอนหายไปหลัง 2 วินาที
+  
     audio.onerror = () => {
       console.error("Error playing audio");
-      setIsSpeaking(false);
-      clearTimeout(timeoutRef.current);
     };
-
-    // Set a timeout to automatically stop speaking after 2 seconds
-    timeoutRef.current = setTimeout(() => {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-      setIsSpeaking(false);
-    }, 2000);
   };
+  
+  
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
