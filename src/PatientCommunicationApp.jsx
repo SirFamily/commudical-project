@@ -68,6 +68,19 @@ import AudioK from "./assets/audio/เปิด ปิดไฟ.mp3";
 import AudioL from "./assets/audio/อยากกลับบ้าน.mp3";
 // import Audio from "./assets/audio";
 
+import AudioAA from "./assets/audio/ร้อน.mp3";
+import AudioBB from "./assets/audio/หนาว.mp3";
+import AudioCC from "./assets/audio/เหนื่อย.mp3";
+import AudioDD from "./assets/audio/เครียด วิตกกังวล.mp3";
+import AudioEE from "./assets/audio/คลื่นไส้ อาเจียน.mp3";
+import AudioFF from "./assets/audio/หายใจลำบาก.mp3";
+import AudioGG from "./assets/audio/คัน.mp3";
+import AudioHH from "./assets/audio/เบื่อ.mp3";
+import AudioII from "./assets/audio/ผิดหวัง.mp3";
+import AudioJJ from "./assets/audio/โกรธ.mp3";
+import AudioKK from "./assets/audio/สบายดี.mp3";
+import AudioLL from "./assets/audio/ขอบคุณ.mp3";
+
 // PatientCommunicationApp Component
 const PatientCommunicationApp = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -107,18 +120,18 @@ const PatientCommunicationApp = () => {
       color: "bg-yellow-500",
       hoverColor: "hover:bg-yellow-600",
       phrases: [
-        { text: "ร้อน", image: YellowA },
-        { text: "หนาว", image: YellowB },
-        { text: "เหนื่อย", image: YellowC },
-        { text: "เครียด/วิตกกังวล", image: YellowD },
-        { text: "คลื่นไส้/อาเจียน", image: YellowE },
-        { text: "หายใจลำบาก", image: YellowF },
-        { text: "คัน", image: YellowG },
-        { text: "เบื่อ", image: YellowH },
-        { text: "ผิดหวัง", image: YellowI },
-        { text: "โกรธ", image: YellowJ },
-        { text: "สบายดี", image: YellowK },
-        { text: "ขอบคุณ", image: YellowL },
+        { text: "ร้อน", image: YellowA, audio: AudioAA },
+        { text: "หนาว", image: YellowB, audio: AudioBB },
+        { text: "เหนื่อย", image: YellowC, audio: AudioCC },
+        { text: "เครียด/วิตกกังวล", image: YellowD, audio: AudioDD },
+        { text: "คลื่นไส้/อาเจียน", image: YellowE, audio: AudioEE },
+        { text: "หายใจลำบาก", image: YellowF, audio: AudioFF },
+        { text: "คัน", image: YellowG, audio: AudioGG },
+        { text: "เบื่อ", image: YellowH, audio: AudioHH },
+        { text: "ผิดหวัง", image: YellowI, audio: AudioII },
+        { text: "โกรธ", image: YellowJ, audio: AudioJJ },
+        { text: "สบายดี", image: YellowK, audio: AudioKK },
+        { text: "ขอบคุณ", image: YellowL, audio: AudioLL },
       ],
     },
   ];
