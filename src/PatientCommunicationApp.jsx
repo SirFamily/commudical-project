@@ -56,7 +56,7 @@ import YellowL from "./assets/images/กินข้าว/26.jpg";
 
 import AudioA from "./assets/audio/ต้องการน้ำ.mp3";
 import AudioB from "./assets/audio/ต้องการปรับท่านอน.mp3";
-import AudioC from "./assets/audio/ต้องการพบญาติ.mp3";
+import AudioC from "./assets/audio/ต้องการพบแพทย์.mp3";
 import AudioD from "./assets/audio/ต้องการพบญาติ.mp3";
 import AudioE from "./assets/audio/หิว.mp3";
 import AudioF from "./assets/audio/ต้องการพลิกตัว.mp3";
