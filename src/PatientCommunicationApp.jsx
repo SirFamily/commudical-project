@@ -136,8 +136,9 @@ const PatientCommunicationApp = () => {
     },
   ];
 
-  const handlePainSelection = (spot) => {
+  const handlePainSelection = (spot,audio) => {
     console.log("Selected spot:", spot);
+    speak(audio)
   };
 
 const speak = (audioFile) => {
