@@ -99,8 +99,8 @@ const PatientCommunicationApp = () => {
     },
   ];
 
-  const handlePainSelection = (spot, level) => {
-    console.log("Selected spot:", spot, "with level:", level);
+  const handlePainSelection = (spot) => {
+    console.log("Selected spot:", spot);
   };
 
   const speak = (text) => {

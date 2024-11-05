@@ -6,17 +6,7 @@ import Tool from "./assets/images/กินข้าว/2.jpg"
 
 const PainAssessment = ({ onPainSelect }) => {
   const [selectedSpot, setSelectedSpot] = useState(null);
-  const [painLevel, setPainLevel] = useState(null);
   const [selectlabel, setSelectlabel] = useState(null);
-
-  const painLevels = [
-    { level: 0, color: "#4CAF50", text: "ไม่ปวด" },
-    { level: 2, color: "#8BC34A", text: "ปวดน้อย" },
-    { level: 4, color: "#FFEB3B", text: "ปวดปานกลาง" },
-    { level: 6, color: "#FFC107", text: "ปวดมาก" },
-    { level: 8, color: "#FF9800", text: "ปวดมากที่สุด" },
-    { level: 10, color: "#F44336", text: "ปวดรุนแรงที่สุด" },
-  ];
 
   const painSpots = [
     { id: 1, text: "ศีรษะ", cx: "51%", cy: "8%" },
@@ -47,7 +37,9 @@ const PainAssessment = ({ onPainSelect }) => {
         {painSpots.map((spot) => (
           <motion.div
             key={spot.id}
-            onClick={() => handleOnClick(spot)}
+            onClick={() => {handleOnClick(spot);
+                onPainSelect(selectlabel);
+            }}
             className={`absolute cursor-pointer ${
               selectedSpot === spot.id ? "bg-red-500" : "bg-white"
             } rounded-full`}
