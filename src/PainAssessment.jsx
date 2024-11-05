@@ -6,7 +6,6 @@ const PainAssessment = ({ onPainSelect }) => {
   const [selectedSpot, setSelectedSpot] = useState(null);
   const [painLevel, setPainLevel] = useState(null);
   const [selectlabel, setSelectlabel] = useState(null);
-  const touchableRef = useRef(null);
 
   const painLevels = [
     { level: 0, color: "#4CAF50", text: "ไม่ปวด" },
@@ -34,30 +33,8 @@ const PainAssessment = ({ onPainSelect }) => {
     setSelectlabel(spot.text);
   };
 
-  const handleTouchStart = (e) => {
-    if (touchableRef.current) {
-      touchableRef.current.addEventListener('touchmove', handleTouchMove);
-      touchableRef.current.addEventListener('touchend', handleTouchEnd);
-    }
-  };
-
-  const handleTouchMove = (e) => {
-    e.preventDefault();
-  };
-
-  const handleTouchEnd = (e) => {
-    if (touchableRef.current) {
-      touchableRef.current.removeEventListener('touchmove', handleTouchMove);
-      touchableRef.current.removeEventListener('touchend', handleTouchEnd);
-    }
-  };
-
   return (
-    <div
-      className="flex flex-col items-center space-y-8 p-4"
-      onTouchStart={handleTouchStart}
-      ref={touchableRef}
-    >
+    <div className="flex flex-col items-center space-y-8 p-4">
       <div className="relative w-94 h-120">
         <img
           src={PainBodyImage}
@@ -69,7 +46,6 @@ const PainAssessment = ({ onPainSelect }) => {
           <motion.div
             key={spot.id}
             onClick={() => handleOnClick(spot)}
-            onTouchStart={(e) => e.preventDefault()}
             className={`absolute cursor-pointer ${
               selectedSpot === spot.id ? "bg-red-500" : "bg-white"
             } rounded-full`}
@@ -81,8 +57,6 @@ const PainAssessment = ({ onPainSelect }) => {
               transform: "translate(-50%, -50%)",
               border: "2px solid #666",
             }}
-            // whileHover={{ scale: 1.2 }}
-            // whileTap={{ scale: 0.9 }}
           />
         ))}
       </div>

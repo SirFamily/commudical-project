@@ -48,7 +48,6 @@ import YellowL from './assets/images/กินข้าว/26.jpg';
 const PatientCommunicationApp = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [isSpeaking, setIsSpeaking] = useState(false);
-  const touchableRef = useRef(null);
 
   const categories = [
     {
@@ -124,30 +123,8 @@ const PatientCommunicationApp = () => {
     window.speechSynthesis.speak(speech);
   };
 
-  const handleTouchStart = (e) => {
-    if (touchableRef.current) {
-      touchableRef.current.addEventListener('touchmove', handleTouchMove);
-      touchableRef.current.addEventListener('touchend', handleTouchEnd);
-    }
-  };
-
-  const handleTouchMove = (e) => {
-    e.preventDefault();
-  };
-
-  const handleTouchEnd = (e) => {
-    if (touchableRef.current) {
-      touchableRef.current.removeEventListener('touchmove', handleTouchMove);
-      touchableRef.current.removeEventListener('touchend', handleTouchEnd);
-    }
-  };
-
   return (
-    <div
-      className="min-h-screen bg-gray-50 p-4"
-      onTouchStart={handleTouchStart}
-      ref={touchableRef}
-    >
+    <div className="min-h-screen bg-gray-50 p-4">
       <div className="grid grid-row-3 gap-4 mb-8">
         {categories.map((category) => (
           <motion.button
@@ -186,13 +163,12 @@ const PatientCommunicationApp = () => {
                     <motion.button
                       key={index}
                       onClick={() => speak(phrase.text)}
-                      onTouchStart={(e) => e.preventDefault()}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="bg-white flex flex-col justify-between items-center justify-center rounded-xl p-4 shadow-lg border border-gray-200 transition duration-200 ease-in-out transform"
+                      className="bg-white flex flex-col justify-between items-center rounded-xl p-4 shadow-lg border border-gray-200 transition duration-200 ease-in-out transform"
                     >
                       <img src={phrase.image} alt={phrase.text} className="w-50 h-50 mr-4" />
-                      <span className="text-2xl">{phrase.text}</span>
+                      <span className="text-xl">{phrase.text}</span>
                     </motion.button>
                   ))}
               </div>
