@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState} from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PainBodyImage from "./assets/images/กินข้าว/1.jpg";
 import Tool from "./assets/images/กินข้าว/2.jpg"
