@@ -4,14 +4,14 @@ import PainBodyImage from "./assets/images/กินข้าว/1.jpg";
 import Tool from "./assets/images/กินข้าว/2.jpg"
 
 import AudioA from "./assets/audio/ปวดศีรษะ.mp3";
-import AudioB from "./assets/audio/ปวดปาก.mp3";
-import AudioC from "./assets/audio/ปวดคอ.mp3";
-import AudioD from "./assets/audio/ปวดหน้าอก.mp3";
+import AudioB from "./assets/audio/เจ็บปาก.mp3";
+import AudioC from "./assets/audio/เจ็บคอ.mp3";
+import AudioD from "./assets/audio/เจ็บหน้าอก.m4a";
 import AudioE from "./assets/audio/ปวดท้อง.mp3";
 import AudioF from "./assets/audio/ปวดแขนซ้าย.mp3";
 import AudioG from "./assets/audio/ปวดแขนขวา.mp3";
-import AudioH from "./assets/audio/ปวดเข่าซ้าย.mp3";
-import AudioI from "./assets/audio/ปวดเข่าขวา.mp3";
+import AudioH from "./assets/audio/ปวดขาซ้าย.mp3";
+import AudioI from "./assets/audio/ปวดขาขวา.mp3";
 
 
 const PainAssessment = ({ onPainSelect }) => {
@@ -78,7 +78,7 @@ const PainAssessment = ({ onPainSelect }) => {
             }}
             className="w-full bg-white rounded-xl shadow-lg p-6"
           >
-            <h3 className="text-xl font-bold mb-4">ระดับความปวด {selectlabel}</h3>
+            <h3 className="text-xl font-bold mb-4">ระดับความเจ็บ {selectlabel}</h3>
             <img src={Tool} alt="" className="w-full h-auto object-contain"/>
           </motion.div>
         </AnimatePresence>
