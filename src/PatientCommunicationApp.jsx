@@ -130,7 +130,7 @@ const PatientCommunicationApp = () => {
         { text: "รู้สึกผิดหวัง", image: YellowI, audio: AudioII },
         { text: "รู้สึกโกรธ", image: YellowJ, audio: AudioJJ },
         { text: "รู้สึกสบายดี", image: YellowK, audio: AudioKK },
-        { text: "ขอบคุณ", image: YellowL, audio: AudioLL },
+        { text: "ขอบคุณครับ/ค่ะ", image: YellowL, audio: AudioLL },
       ],
     },
   ];
