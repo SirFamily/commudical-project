@@ -19,15 +19,15 @@ const PainAssessment = ({ onPainSelect }) => {
   const [selectlabel, setSelectlabel] = useState(null);
 
   const painSpots = [
-    { id: 1, text: "ปวดศีรษะ", cx: "51%", cy: "8%",audio: AudioA },
-    { id: 2, text: "เจ็บปาก", cx: "51%", cy: "15%",audio: AudioB },
-    { id: 3, text: "เจ็บคอ", cx: "51%", cy: "19%",audio: AudioC },
-    { id: 4, text: "เจ็บหน้าอก", cx: "51%", cy: "27%",audio: AudioD },
-    { id: 5, text: "ปวดท้อง", cx: "51%", cy: "40%",audio: AudioE },
-    { id: 6, text: "ปวดแขนซ้าย", cx: "31%", cy: "43%",audio: AudioF },
-    { id: 7, text: "ปวดแขนขวา", cx: "71%", cy: "43%",audio: AudioG },
-    { id: 8, text: "ปวดเข่าซ้าย", cx: "41%", cy: "77%",audio: AudioH },
-    { id: 9, text: "ปวดเข่าขวา", cx: "61%", cy: "77%",audio: AudioI },
+    { id: 1, text: "ปวด ศีรษะ", cx: "51%", cy: "8%",audio: AudioA },
+    { id: 2, text: "เจ็บ ปาก", cx: "51%", cy: "15%",audio: AudioB },
+    { id: 3, text: "เจ็บ คอ", cx: "51%", cy: "19%",audio: AudioC },
+    { id: 4, text: "เจ็บ หน้าอก", cx: "51%", cy: "27%",audio: AudioD },
+    { id: 5, text: "ปวด ท้อง", cx: "51%", cy: "40%",audio: AudioE },
+    { id: 6, text: "ปวด แขนซ้าย", cx: "31%", cy: "43%",audio: AudioF },
+    { id: 7, text: "ปวด แขนขวา", cx: "71%", cy: "43%",audio: AudioG },
+    { id: 8, text: "ปวด เข่าซ้าย", cx: "41%", cy: "77%",audio: AudioH },
+    { id: 9, text: "ปวด เข่าขวา", cx: "61%", cy: "77%",audio: AudioI },
   ];
 
   const handleOnClick = (spot) => {
