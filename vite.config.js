@@ -76,7 +76,7 @@ export default defineConfig({
         swDest: "dist/sw.js"
       },
       manifest: {
-        name: "Smart Voice | ระบบสื่อสารสำหรับผู้ป่วย",
+        name: "Smart Voice | ระบบการสื่อสารสำหรับผู้ป่วยเพื่อสื่อสารความต้องการและความรู้สึก",
         short_name: "Smart Voice",
         theme_color: "#ffffff",
         background_color: "#ffffff",
