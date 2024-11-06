@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .text-xl {
-      font-size: 1.5rem;
+      font-size: 2.0rem;
     }
   }
