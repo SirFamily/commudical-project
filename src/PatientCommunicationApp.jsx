@@ -235,7 +235,7 @@ const speak = (audioFile) => {
                         alt={phrase.text}
                         className="w-50 h-50 mr-4"
                       />
-                      <span className="text-xl">{phrase.text}</span>
+                      <span className="textdesc">{phrase.text}</span>
                     </motion.button>
                   ))}
               </div>
