@@ -54,11 +54,11 @@ import YellowJ from "./assets/images/กินข้าว/24.jpg";
 import YellowK from "./assets/images/กินข้าว/25.jpg";
 import YellowL from "./assets/images/กินข้าว/26.jpg";
 
-import AudioA from "./assets/audio/ต้องการน้ำ.mp3";
-import AudioB from "./assets/audio/ต้องการปรับท่านอน.mp3";
+import AudioA from "./assets/audio/ดื่มน้ำ.mp3";
+import AudioB from "./assets/audio/ปรับระดับเตียง.mp3";
 import AudioC from "./assets/audio/ต้องการพบแพทย์.mp3";
 import AudioD from "./assets/audio/ต้องการพบญาติ.mp3";
-import AudioE from "./assets/audio/หิว.mp3";
+import AudioE from "./assets/audio/หิวข้าว.mp3";
 import AudioF from "./assets/audio/ต้องการพลิกตัว.mp3";
 import AudioG from "./assets/audio/ต้องการดูดเสมหะ.mp3";
 import AudioH from "./assets/audio/ปัสสาวะ.mp3";
@@ -68,17 +68,17 @@ import AudioK from "./assets/audio/เปิด ปิดไฟ.mp3";
 import AudioL from "./assets/audio/อยากกลับบ้าน.mp3";
 // import Audio from "./assets/audio";
 
-import AudioAA from "./assets/audio/ร้อน.mp3";
-import AudioBB from "./assets/audio/หนาว.mp3";
-import AudioCC from "./assets/audio/เหนื่อย.mp3";
+import AudioAA from "./assets/audio/รู้สึกร้อน.mp3";
+import AudioBB from "./assets/audio/รู้สึกหนาว.mp3";
+import AudioCC from "./assets/audio/รู้สึกเหนื่อย.mp3";
 import AudioDD from "./assets/audio/เครียด วิตกกังวล.mp3";
 import AudioEE from "./assets/audio/คลื่นไส้ อาเจียน.mp3";
 import AudioFF from "./assets/audio/หายใจลำบาก.mp3";
-import AudioGG from "./assets/audio/คัน.mp3";
-import AudioHH from "./assets/audio/เบื่อ.mp3";
-import AudioII from "./assets/audio/ผิดหวัง.mp3";
-import AudioJJ from "./assets/audio/โกรธ.mp3";
-import AudioKK from "./assets/audio/สบายดี.mp3";
+import AudioGG from "./assets/audio/รู้สึกคัน.mp3";
+import AudioHH from "./assets/audio/รู้สึกเบื่อ.mp3";
+import AudioII from "./assets/audio/รู้สึกผิดหวัง.mp3";
+import AudioJJ from "./assets/audio/รู้สึกโกรธ.mp3";
+import AudioKK from "./assets/audio/รู้สึกสบายดี.mp3";
 import AudioLL from "./assets/audio/ขอบคุณ.mp3";
 
 // PatientCommunicationApp Component
@@ -101,10 +101,10 @@ const PatientCommunicationApp = () => {
       hoverColor: "hover:bg-blue-600",
       phrases: [
         { text: "ต้องการน้ำ", image: BlueA, audio: AudioA },
-        { text: "ต้องการปรับท่านอน", image: BlueB, audio: AudioB  },
+        { text: "ต้องการปรับระดับเตียง", image: BlueB, audio: AudioB  },
         { text: "ต้องการพบแพทย์", image: BlueC, audio: AudioC },
         { text: "ต้องการพบญาติ", image: BlueD, audio: AudioD  },
-        { text: "หิว", image: BlueE, audio: AudioE  },
+        { text: "หิวข้าว", image: BlueE, audio: AudioE  },
         { text: "ต้องการพลิกตัว", image: BlueF, audio: AudioF  },
         { text: "ต้องการดูดเสมหะ", image: BlueG, audio: AudioG  },
         { text: "ปัสสาวะ", image: BlueH, audio: AudioH  },
@@ -120,17 +120,17 @@ const PatientCommunicationApp = () => {
       color: "bg-yellow-500",
       hoverColor: "hover:bg-yellow-600",
       phrases: [
-        { text: "ร้อน", image: YellowA, audio: AudioAA },
-        { text: "หนาว", image: YellowB, audio: AudioBB },
-        { text: "เหนื่อย", image: YellowC, audio: AudioCC },
+        { text: "รู้สึกร้อน", image: YellowA, audio: AudioAA },
+        { text: "รู้สึกหนาว", image: YellowB, audio: AudioBB },
+        { text: "รู้สึกเหนื่อย", image: YellowC, audio: AudioCC },
         { text: "เครียด วิตกกังวล", image: YellowD, audio: AudioDD },
         { text: "คลื่นไส้ อาเจียน", image: YellowE, audio: AudioEE },
         { text: "หายใจลำบาก", image: YellowF, audio: AudioFF },
-        { text: "คัน", image: YellowG, audio: AudioGG },
-        { text: "เบื่อ", image: YellowH, audio: AudioHH },
-        { text: "ผิดหวัง", image: YellowI, audio: AudioII },
-        { text: "โกรธ", image: YellowJ, audio: AudioJJ },
-        { text: "สบายดี", image: YellowK, audio: AudioKK },
+        { text: "รู้สึกคัน", image: YellowG, audio: AudioGG },
+        { text: "รู้สึกเบื่อ", image: YellowH, audio: AudioHH },
+        { text: "รู้สึกผิดหวัง", image: YellowI, audio: AudioII },
+        { text: "รู้สึกโกรธ", image: YellowJ, audio: AudioJJ },
+        { text: "รู้สึกสบายดี", image: YellowK, audio: AudioKK },
         { text: "ขอบคุณ", image: YellowL, audio: AudioLL },
       ],
     },
@@ -162,8 +162,30 @@ const speak = (audioFile) => {
       <head>
         <meta name="description" content="ระบบการสื่อสารสำหรับผู้ป่วยเพื่อสื่อสารความต้องการและความรู้สึก" />
       </head>
-      <div>Smart voice</div>
-      <div>{"การสื่อสารอัจฉริยะสำหรับผู้ป่วยใส่ท่อช่วยหายใจ (Smart Communication For Intubated Patiens)"}</div>
+      <motion.h1
+        className="text-4xl font-extrabold text-blue-700 mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        Smart Voice
+      </motion.h1>
+      <motion.h2
+        className="text-2xl font-semibold text-gray-700 text-center"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+      >
+        การสื่อสารอัจฉริยะสำหรับผู้ป่วยใส่ท่อช่วยหายใจ
+      </motion.h2>
+      <motion.h2
+        className="text-lg font-semibold text-gray-700 mb-6 text-center"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.9, ease: "easeOut" }}
+      >
+        (Smart Communication For Intubated Patients)
+      </motion.h2>
       <div className="grid grid-row-3 gap-4 mb-8">
         {categories.map((category) => (
           <motion.button
