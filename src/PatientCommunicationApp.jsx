@@ -66,7 +66,6 @@ import AudioI from "./assets/audio/ถ่ายอุจจาระ.mp3";
 import AudioJ from "./assets/audio/ต้องการอาบน้ำ.mp3";
 import AudioK from "./assets/audio/เปิด ปิดไฟ.mp3";
 import AudioL from "./assets/audio/อยากกลับบ้าน.mp3";
-// import Audio from "./assets/audio";
 
 import AudioAA from "./assets/audio/รู้สึกร้อน.mp3";
 import AudioBB from "./assets/audio/รู้สึกหนาว.mp3";
@@ -100,7 +99,7 @@ const PatientCommunicationApp = () => {
       color: "bg-blue-500",
       hoverColor: "hover:bg-blue-600",
       phrases: [
-        { text: "ต้องการน้ำ", image: BlueA, audio: AudioA },
+        { text: "ดื่มน้ำ", image: BlueA, audio: AudioA },
         { text: "ต้องการปรับระดับเตียง", image: BlueB, audio: AudioB  },
         { text: "ต้องการพบแพทย์", image: BlueC, audio: AudioC },
         { text: "ต้องการพบญาติ", image: BlueD, audio: AudioD  },
