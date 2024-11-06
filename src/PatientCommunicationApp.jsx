@@ -189,7 +189,7 @@ const speak = (audioFile) => {
         {categories.map((category) => (
           <motion.button
             key={category.id}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.01 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setSelectedCategory(category.id)}
             className={`${category.color} ${category.hoverColor} text-white rounded-xl p-8 text-2xl font-bold shadow-lg`}
@@ -226,7 +226,7 @@ const speak = (audioFile) => {
                     <motion.button
                       key={index}
                       onClick={() => speak(phrase.audio)}
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.95 }}
                       className="bg-white flex flex-col justify-between items-center rounded-xl p-4 shadow-lg border border-gray-200 transition duration-200 ease-in-out transform"
                     >
