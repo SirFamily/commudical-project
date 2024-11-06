@@ -19,15 +19,15 @@ const PainAssessment = ({ onPainSelect }) => {
   const [selectlabel, setSelectlabel] = useState(null);
 
   const painSpots = [
-    { id: 1, text: "ศีรษะ", cx: "51%", cy: "8%",audio: AudioA },
-    { id: 2, text: "ปาก", cx: "51%", cy: "15%",audio: AudioB },
-    { id: 3, text: "คอ", cx: "51%", cy: "19%",audio: AudioC },
-    { id: 4, text: "หน้าอก", cx: "51%", cy: "27%",audio: AudioD },
-    { id: 5, text: "ท้อง", cx: "51%", cy: "40%",audio: AudioE },
-    { id: 6, text: "แขนซ้าย", cx: "31%", cy: "43%",audio: AudioF },
-    { id: 7, text: "แขนขวา", cx: "71%", cy: "43%",audio: AudioG },
-    { id: 8, text: "เข่าซ้าย", cx: "41%", cy: "77%",audio: AudioH },
-    { id: 9, text: "เข่าขวา", cx: "61%", cy: "77%",audio: AudioI },
+    { id: 1, text: "ปวดศีรษะ", cx: "51%", cy: "8%",audio: AudioA },
+    { id: 2, text: "เจ็บปาก", cx: "51%", cy: "15%",audio: AudioB },
+    { id: 3, text: "เจ็บคอ", cx: "51%", cy: "19%",audio: AudioC },
+    { id: 4, text: "เจ็บหน้าอก", cx: "51%", cy: "27%",audio: AudioD },
+    { id: 5, text: "ปวดท้อง", cx: "51%", cy: "40%",audio: AudioE },
+    { id: 6, text: "ปวดแขนซ้าย", cx: "31%", cy: "43%",audio: AudioF },
+    { id: 7, text: "ปวดแขนขวา", cx: "71%", cy: "43%",audio: AudioG },
+    { id: 8, text: "ปวดเข่าซ้าย", cx: "41%", cy: "77%",audio: AudioH },
+    { id: 9, text: "ปวดเข่าขวา", cx: "61%", cy: "77%",audio: AudioI },
   ];
 
   const handleOnClick = (spot) => {
@@ -78,7 +78,7 @@ const PainAssessment = ({ onPainSelect }) => {
             }}
             className="w-full bg-white rounded-xl shadow-lg p-6"
           >
-            <h3 className="text-xl font-bold mb-4">ระดับความเจ็บ {selectlabel}</h3>
+            <h3 className="text-xl font-bold mb-4">ระดับความ{selectlabel}</h3>
             <img src={Tool} alt="" className="w-full h-auto object-contain"/>
           </motion.div>
         </AnimatePresence>
