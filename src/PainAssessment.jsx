@@ -26,8 +26,8 @@ const PainAssessment = ({ onPainSelect }) => {
     { id: 5, text: "ปวด ท้อง", cx: "51%", cy: "40%",audio: AudioE },
     { id: 6, text: "ปวด แขนซ้าย", cx: "31%", cy: "43%",audio: AudioF },
     { id: 7, text: "ปวด แขนขวา", cx: "71%", cy: "43%",audio: AudioG },
-    { id: 8, text: "ปวด เข่าซ้าย", cx: "41%", cy: "77%",audio: AudioH },
-    { id: 9, text: "ปวด เข่าขวา", cx: "61%", cy: "77%",audio: AudioI },
+    { id: 8, text: "ปวด ขาซ้าย", cx: "41%", cy: "77%",audio: AudioH },
+    { id: 9, text: "ปวด ขาขวา", cx: "61%", cy: "77%",audio: AudioI },
   ];
 
   const handleOnClick = (spot) => {
@@ -78,7 +78,7 @@ const PainAssessment = ({ onPainSelect }) => {
             }}
             className="w-full bg-white rounded-xl shadow-lg p-6"
           >
-            <h3 className="text-xl font-bold mb-4">ระดับความ{selectlabel}</h3>
+            <h3 className="textdesc font-bold mb-4">ระดับความ{selectlabel}</h3>
             <img src={Tool} alt="" className="w-full h-auto object-contain"/>
           </motion.div>
         </AnimatePresence>
