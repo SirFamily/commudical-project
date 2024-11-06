@@ -10,6 +10,13 @@
 
   @media (max-width: 767px) {
     .textdesc {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
     }
   }
+
+  @media (max-width: 400px) {
+    .textdesc {
+      font-size: 1.3rem;
+    }
+  }
+  
