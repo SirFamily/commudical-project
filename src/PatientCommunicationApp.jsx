@@ -158,9 +158,6 @@ const speak = (audioFile) => {
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
-      <head>
-        <meta name="description" content="ระบบการสื่อสารสำหรับผู้ป่วยเพื่อสื่อสารความต้องการและความรู้สึก" />
-      </head>
       <motion.h1
         className="text-4xl font-extrabold text-blue-700 mb-4"
         initial={{ opacity: 0, y: -20 }}
