@@ -76,7 +76,7 @@ const PainAssessment = ({ onPainSelect }) => {
               duration: 0.3,
               ease: "easeInOut",
             }}
-            className="w-full bg-white rounded-xl shadow-lg p-6"
+            className="w-full bg-white rounded-xl shadow-lg p-6 text-center"
           >
             <h3 className="textdesc font-bold mb-4">ระดับความ{selectlabel}</h3>
             <img src={Tool} alt="" className="w-full h-auto object-contain"/>

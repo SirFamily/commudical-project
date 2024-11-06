@@ -159,7 +159,7 @@ const speak = (audioFile) => {
   return (
     <div className="min-h-screen bg-gray-50 p-4">
       <motion.h1
-        className="text-4xl font-extrabold text-blue-700 mb-4"
+        className="text-4xl font-extrabold text-blue-700 mb-4 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
